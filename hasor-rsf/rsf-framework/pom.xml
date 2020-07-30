@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.hasor</groupId>
+        <artifactId>hasor-parent</artifactId>
+        <version>4.1.14-SNAPSHOT</version>
+        <relativePath>../..</relativePath>
+    </parent>
+
+    <!-- Maven Info -->
+    <artifactId>hasor-rsf</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- Project Info -->
+    <name>Hasor-RSF/RPC</name>
+    <description>the Hasor Remote Service Framework project.</description>
+
+    <developers>
+        <developer>
+            <name>赵永春(Mr.Zhao)</name>
+            <email>zyc@hasor.net</email>
+        </developer>
+    </developers>
+
+    <build>
+        <plugins>
+            <!-- 把 javassist、ognl 的源码和 class 集成到 hasor-dataql-fx 项目 中 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createSourcesJar>true</createSourcesJar>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <artifactSet>
+                                <includes>
+                                    <include>net.hasor:hasor-rsf</include>
+                                    <include>org.hprose:hprose-java</include>
+                                    <include>com.caucho:hessian</include>
+                                </includes>
+                            </artifactSet>
+                            <relocations>
+                                <relocation>
+                                    <pattern>hprose</pattern>
+                                    <shadedPattern>net.hasor.rsf.hprose</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>com.caucho</pattern>
+                                    <shadedPattern>net.hasor.rsf.hessian</shadedPattern>
+                                </relocation>
+                            </relocations>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/MANIFEST.MF</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- 引用依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-tconsole</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hprose</groupId>
+            <artifactId>hprose-java</artifactId>
+            <version>2.0.38</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.caucho</groupId>
+            <artifactId>hessian</artifactId>
+            <version>4.0.63</version>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+
+
+        <!-- JSON 序列化 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>

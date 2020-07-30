@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.hasor</groupId>
+        <artifactId>hasor-parent</artifactId>
+        <version>4.1.14-SNAPSHOT</version>
+    </parent>
+
+    <!-- Maven Info -->
+    <artifactId>hasor-db</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- Project Info -->
+    <name>Hasor-DB</name>
+    <description>the hasor DataBase project.</description>
+
+    <developers>
+        <developer>
+            <name>赵永春(Mr.Zhao)</name>
+            <email>zyc@hasor.net</email>
+        </developer>
+    </developers>
+
+    <!-- 引用依赖 -->
+    <dependencies>
+        <!-- Hasor -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-core</artifactId>
+        </dependency>
+        <!-- 整合 MyBatis 提供MyBatis插件, 最终由项目环境的 MyBatis 提供依赖 -->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- 测试 -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

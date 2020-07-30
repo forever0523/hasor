@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.hasor</groupId>
+        <artifactId>hasor-parent</artifactId>
+        <version>4.1.14-SNAPSHOT</version>
+    </parent>
+    
+    <!-- Maven Info -->
+    <artifactId>hasor-core</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- Project Info -->
+    <name>Hasor-Core</name>
+    <description>the hasor core project.</description>
+
+    <developers>
+        <developer>
+            <name>赵永春(Mr.Zhao)</name>
+            <email>zyc@hasor.net</email>
+        </developer>
+    </developers>
+
+    <!-- 引用依赖 -->
+    <dependencies>
+        <!-- Log依赖 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!-- Commons -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-commons</artifactId>
+        </dependency>
+        <!-- 依赖注入标准包 -->
+        <dependency>
+            <groupId>javax.inject</groupId>
+            <artifactId>javax.inject</artifactId>
+            <version>1</version>
+        </dependency>
+    </dependencies>
+</project>

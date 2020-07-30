@@ -1,0 +1,19 @@
+[0]
+  #00  E_LOAD    #
+  #01  GET       a
+  #02  E_LOAD    #
+  #03  GET       a
+  #04  DO        ==
+  #05  IF        9
+  #06  LDC_D     11
+  #07  STORE     0
+  #08  GOTO      16
+  #09  LABEL     9
+  #10  LDC_B     true
+  #11  IF        15
+  #12  LDC_D     22
+  #13  STORE     1
+  #14  GOTO      16
+  #15  LABEL     15
+  #16  LABEL     16
+

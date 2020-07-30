@@ -1,0 +1,7 @@
+[0]
+  #0  LDC_D     134
+  #1  THROW     0
+  #2  LDC_D     -134
+  #3  THROW     0
+  #4  LDC_S     ssss
+  #5  THROW     234

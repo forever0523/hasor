@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.hasor.net/sechma/main">
+
+    <hasor.environmentVar>
+        <!-- RSF对外提供服务的IP -->
+        <RSF_SERVICE_IP>0.0.0.0</RSF_SERVICE_IP>
+
+        <!-- Telnet 控制台端口 -->
+        <TCONSOLE_PORT>2170</TCONSOLE_PORT>
+        <!-- RSF    服务端口 -->
+        <RSF_SERVICE_PORT>2171</RSF_SERVICE_PORT>
+        <!-- Hprose 服务端口 -->
+        <HPROSE_SERVICE_PORT>2172</HPROSE_SERVICE_PORT>
+    </hasor.environmentVar>
+
+</config>

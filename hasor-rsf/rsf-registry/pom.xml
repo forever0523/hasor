@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>net.hasor</groupId>
+        <artifactId>hasor-parent</artifactId>
+        <version>4.0.7-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+
+    <!-- Maven Info -->
+    <artifactId>hasor-registry</artifactId>
+    <packaging>jar</packaging>
+
+    <!-- Project Info -->
+    <name>Hasor-Registry</name>
+    <description>the Hasor Remote Service Framework project.</description>
+
+    <developers>
+        <developer>
+            <name>赵永春(Mr.Zhao)</name>
+            <email>zyc@hasor.net</email>
+        </developer>
+    </developers>
+
+    <!-- 引用依赖 -->
+    <dependencies>
+        <!-- 核心依赖 -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-rsf</artifactId>
+        </dependency>
+
+        <!-- JSON 序列化 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+        <!-- 存储 -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-db</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+        </dependency>
+    </dependencies>
+
+    <!-- 构建描述 -->
+    <profiles>
+        <profile>
+            <id>export</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <configuration>
+                            <finalName>rsf-center-v${project.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <outputDirectory>build</outputDirectory>
+                            <descriptors>
+                                <descriptor>src/launcher/assembly.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>make-assembly</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+            <dependencies>
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-to-slf4j</artifactId>
+                    <version>2.5</version>
+                </dependency>
+                <dependency>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                    <version>1.1.7</version>
+                </dependency>
+                <dependency>
+                    <groupId>com.alibaba</groupId>
+                    <artifactId>fastjson</artifactId>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles>
+</project>

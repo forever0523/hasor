@@ -1,0 +1,114 @@
+{
+  "id": "1681128",
+  "name": "hasor-dataql",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "Hasor-DataQL",
+  "glyphs": [
+    {
+      "icon_id": "10453",
+      "name": "更多",
+      "font_class": "more",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "15220098",
+      "name": "重新分析",
+      "font_class": "analysis",
+      "unicode": "e7c6",
+      "unicode_decimal": 59334
+    },
+    {
+      "icon_id": "4944052",
+      "name": "new",
+      "font_class": "new",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "8437957",
+      "name": "down-load",
+      "font_class": "download",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "13606462",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e7c4",
+      "unicode_decimal": 59332
+    },
+    {
+      "icon_id": "6163418",
+      "name": "复制",
+      "font_class": "copy",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "5806440",
+      "name": "格式化",
+      "font_class": "format",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "4699965",
+      "name": "调试",
+      "font_class": "debug",
+      "unicode": "e7c3",
+      "unicode_decimal": 59331
+    },
+    {
+      "icon_id": "9993194",
+      "name": "执行",
+      "font_class": "execute",
+      "unicode": "e70a",
+      "unicode_decimal": 59146
+    },
+    {
+      "icon_id": "8085926",
+      "name": "删 除",
+      "font_class": "delete",
+      "unicode": "e720",
+      "unicode_decimal": 59168
+    },
+    {
+      "icon_id": "6721603",
+      "name": "禁用",
+      "font_class": "disable",
+      "unicode": "e6a7",
+      "unicode_decimal": 59047
+    },
+    {
+      "icon_id": "4582088",
+      "name": "发布",
+      "font_class": "release",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "10104267",
+      "name": "save",
+      "font_class": "save",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "3484650",
+      "name": "历史",
+      "font_class": "history",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7002505",
+      "name": "测试",
+      "font_class": "test",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[0]
+  #00  E_LOAD    #
+  #01  GET       a
+  #02  POP
+  #03  NEW_O
+  #04  RETURN    0
+  #05  E_LOAD    #
+  #06  GET       b
+  #07  CAST_O
+  #08  E_PUSH
+  #09  NEW_O
+  #10  E_LOAD    #
+  #11  GET       abc
+  #12  PUT       abc
+  #13  E_LOAD    #
+  #14  GET       cde
+  #15  PUT       cde
+  #16  E_POP
+  #17  RETURN    0
+  #18  E_LOAD    #
+  #19  GET       b
+  #20  CAST_O
+  #21  E_PUSH
+  #22  NEW_O
+  #23  E_LOAD    #
+  #24  GET       abc
+  #25  PUT       abc
+  #26  E_POP
+  #27  RETURN    0
+  #28  E_LOAD    #
+  #29  GET       b
+  #30  CAST_O
+  #31  E_PUSH
+  #32  NEW_O
+  #33  E_LOAD    #
+  #34  GET       ccc
+  #35  PUT       abc
+  #36  NEW_A
+  #37  E_LOAD    #
+  #38  GET       a
+  #39  PUSH
+  #40  E_LOAD    #
+  #41  GET       b
+  #42  PUSH
+  #43  E_LOAD    #
+  #44  GET       c
+  #45  PUSH
+  #46  NEW_A
+  #47  LDC_S     ss
+  #48  PUSH
+  #49  E_LOAD    #
+  #50  GET       df
+  #51  PUSH
+  #52  PUSH
+  #53  NEW_O
+  #54  E_LOAD    #
+  #55  GET       abc
+  #56  PUT       abc
+  #57  LDC_B     true
+  #58  PUT       aacc
+  #59  PUSH
+  #60  PUT       cde
+  #61  E_POP
+  #62  RETURN    0
+

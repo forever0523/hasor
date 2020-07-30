@@ -1,0 +1,14 @@
+[0]
+  #00  E_LOAD    #
+  #01  GET       a
+  #02  PULL      123
+  #03  GET       dd
+  #04  GET       a
+  #05  GET       b
+  #06  GET       c
+  #07  PULL      -1
+  #08  RETURN    0
+  #09  LOAD_C    $
+  #10  GET       ssss
+  #11  RETURN    0
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.hasor.net/sechma/dataql-fx">
+    <hasor>
+        <!-- 包扫描覆盖范围，逗号间隔 -->
+        <loadPackages>net.hasor.dataql.fx.*</loadPackages>
+        <!-- 入口 -->
+        <modules.module>net.hasor.dataql.fx.FxModule</modules.module>
+
+        <environmentVar>
+            <!-- SQL 方言，默认为空。使用时必须设置 -->
+            <HASOR_DATAQL_FX_PAGE_DIALECT></HASOR_DATAQL_FX_PAGE_DIALECT>
+        </environmentVar>
+    </hasor>
+</config>
