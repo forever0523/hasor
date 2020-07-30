@@ -16,6 +16,7 @@
 package net.hasor.dataql.fx;
 import net.hasor.dataql.QueryApiBinder;
 import net.hasor.dataql.QueryModule;
+import net.hasor.dataql.fx.db.likemybatis.MybatisFragment;
 import net.hasor.dataql.fx.db.runsql.SqlFragment;
 import net.hasor.dataql.fx.web.FxWebInterceptor;
 import net.hasor.utils.ResourcesUtils;
@@ -32,7 +33,10 @@ public class FxModule implements QueryModule {
         //
         // .SQL代码片段执行器
         apiBinder.bindFragment("sql", SqlFragment.class);
-        //
+
+        // 新增@@mybatis
+        apiBinder.bindFragment("mybatis", MybatisFragment.class);
+
         // .如果是 Web 环境那么初始化 web 相关的 函数包。
         if (ResourcesUtils.getResource("/net/hasor/web/WebApiBinder.class") != null) {
             WebApiBinder webApiBinder = apiBinder.tryCast(WebApiBinder.class);
